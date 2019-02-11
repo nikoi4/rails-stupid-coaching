@@ -1,0 +1,20 @@
+
+
+<div id="me">
+  <p class="question"><%= @answer %></p>
+  <p>-You</p>
+</div>
+
+
+<div id="coach">
+  <% if @answer == 'I am going to work' %>
+    <p class="answer"><%= "Great!" %></p>
+  <% elsif @answer.include?('?')%>
+    <p class="answer"><%= "Silly question, get dressed and go to work!" %></p>
+  <% else %>
+    <p class="answer"><%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+  <p>-Your coach</p>
+</div>
+
+<%= link_to "Ask more questions to Coach", ask_path %>
